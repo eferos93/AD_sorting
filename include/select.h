@@ -50,4 +50,9 @@ void quick_sort_select(void *A, const unsigned int n,
                        const size_t elem_size, 
                        total_order leq);
 
+struct pair{
+  size_t first;
+  size_t second;
+};
+
 #endif // __SELECT__

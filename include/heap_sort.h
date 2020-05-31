@@ -2,8 +2,8 @@
 #define __HEAP_SORT__
 
 #include <stdlib.h>
-
 #include "total_order.h"
+#include "binheap.h"
 
 /**********************************************************************
  * An implementation for the Heap Sort algorithm.
