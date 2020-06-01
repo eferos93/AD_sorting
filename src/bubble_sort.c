@@ -10,7 +10,7 @@ void bubble_sort(void *A, const unsigned int n,
     {
         for (size_t j = 0; j < i; j++)
         {
-            if (!leq(A+j, A+j+1))
+            if (!leq(ADDR(A, j, elem_size), ADDR(A, j+1, elem_size)))
             {
                 swap(ADDR(A, j, elem_size), ADDR(A, j+1, elem_size), elem_size);                
             }
