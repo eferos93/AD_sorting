@@ -6,7 +6,6 @@ unsigned int partition(void *A, unsigned int left,
                        unsigned int right, unsigned int pivot_index,
                        const size_t elem_size, total_order leq)
 {
-    //swap(A + pivot_index, A + left, elem_size);
     swap(ADDR(A, pivot_index, elem_size), ADDR(A, left, elem_size), elem_size);
     pivot_index = left;
     left++;
@@ -15,7 +14,6 @@ unsigned int partition(void *A, unsigned int left,
     {
         if (!leq(ADDR(A, left, elem_size), ADDR(A, pivot_index, elem_size)))
         {
-            //swap(A + i, A + j, elem_size);
             swap(ADDR(A, left, elem_size), ADDR(A, right, elem_size), elem_size);
             right--;
         }
@@ -24,7 +22,6 @@ unsigned int partition(void *A, unsigned int left,
             left++;
         }
     }
-    //swap(A + pivot_index, A + j, elem_size);
     swap(ADDR(A, pivot_index, elem_size), ADDR(A, right, elem_size), elem_size);
     return right; //position of the pivot
 }

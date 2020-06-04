@@ -1,4 +1,12 @@
-# DSSC - Algorithmic Design - Sorting Algorithms
+# Compliation
+By running the
+```bash
+cmake -G "Unix Makefiles" CMakeLists.txt
+```
+everything should work.
+The report is in the directory. For making the plots out of a new execution of `./test_sorting`, just open a terminal inside the benchmark_plot folder and run `python plot.py` (pandas is required).
+
+## DSSC - Algorithmic Design - Sorting Algorithms
 This repository contains some code to simplify the implementation and testing of sorting algorithms. The code in this repository natively support insertion sort, quick sort (with and without the select algorithm to identify the pivot), bubble sort, selection sort, and heap sort, but other algorithms can easily be added by editing the main function in the file [main.c](src/main.c).
 
 In order to test the differences in term of execution-time between the sorting algorithms, you need to implement all of them. The insertion sort algorithm must be implemented in the file [insertion_sort.c](src/insertion_sort.c) according to the API defined in [insertion_sort.h](src/insertion_sort.h); the quick sort algorithm in the file [quick_sort.c](src/quick_sort.c) and, so forward, for all the algorithms.
